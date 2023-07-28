@@ -34,25 +34,112 @@
         class="bg-no-repeat bg-center bg-[url(./src/Template5/Uploads/Banner.png)] w-full h-[685px] overflow-hidden bg-cover object-cover"
       >
         <div class="container mx-auto mt-6">
-          <div class="relative flex items-center justify-between overflow-hidden">
-            <img src="./src/Template5/Uploads/image3.png" alt="" />
-          <div class="hidden lg:block">
-			<nav id="myMenu" class="flex items-center gap-36">
-				<ul class="flex items-center gap-8 text-base font-bold">
-				  <li class="block">Giới thiệu</li>
-				  <li class="block">Đối tượng khách hàng</li>
-				  <li class="block">Quy trình</li>
-				  <li class="block">Bảng giá</li>
-				  <li class="block">Cảm nhận của khách hàng</li>
-				  <li class="block">Đội ngũ bác sĩ</li>
-				</ul>
-				<div
-				  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-60 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer"
-				>
-				  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
-				</div>
-			  </nav>
-		  </div>
+          <div class="flex justify-between">
+            <img src="./Uploads/image3.png" alt="" />
+            <div class="nav flex items-center h-12">
+              <nav class="nav__pc flex items-center gap-36">
+                <ul class="nav__list flex list-none gap-8">
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Giới thiệu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Đối tượng khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Quy trình</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Bảng giá</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Cảm nhận của khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Đội ngũ bác sĩ</a
+                    >
+                  </li>
+                </ul>
+                <div
+                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer"
+                >
+                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
+                </div>
+              </nav>
+              <label
+                for="nav-mobile-input"
+                class="nav__bars-btn w-7 h-7 text-[#fff] hidden"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+                  />
+                </svg>
+              </label>
+              <!--khi click vào nav__bars-btn thì = click vào check box -->
+              <input type="checkbox" id="nav-mobile-input" class="nav__input" />
+              <label
+                for="nav-mobile-input"
+                class="nav__overlay fixed top-0 right-0 left-0 p-5 bg-black hidden"
+              ></label>
+              <nav
+                class="nav__mobile fixed top-0 right-0 left-0 p-5 w-80 bg-black"
+              >
+                <label
+                  for="nav-mobile-input"
+                  class="nav__mobile-close absolute w-7 h-7 top-4 right-4"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                    />
+                  </svg>
+                </label>
+                <ul class="mt-6 flex flex-col gap-y-7">
+                  <li><a href="" class="nav__mobile-link">Giới thiệu</a></li>
+                  <li>
+                    <a href="" class="nav__mobile-link">Đối tượng khách hàng</a>
+                  </li>
+                  <li><a href="" class="nav__mobile-link">Quy trình</a></li>
+                  <li><a href="" class="nav__mobile-link">Bảng giá</a></li>
+                  <li>
+                    <a href="" class="nav__mobile-link"
+                      >Cảm nhận của khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="nav__mobile-link">Đội ngũ bác sĩ</a>
+                  </li>
+                </ul>
+                <div
+                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 w-36 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer mt-7"
+                >
+                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
+                </div>
+              </nav>
+            </div>
           </div>
 
           <div class="flex items-center mt-8 lg:mt-36 gap-x-1">
@@ -174,22 +261,23 @@
                 người mắc hội chứng Cowden, MEN II hoặc FAP.
               </div>
               <div class="flex items-center gap-2 mt-6">
-                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Những người có chế
-                độ ăn thiếu i - ốt.
+                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Những
+                người có chế độ ăn thiếu i - ốt.
               </div>
               <div class="flex items-center gap-2 mt-6">
-                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Đối tượng bị phơi
-                nhiễm phóng xạ ở mức cao.
+                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Đối
+                tượng bị phơi nhiễm phóng xạ ở mức cao.
               </div>
               <div class="flex items-center gap-2 mt-6">
-                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Người đang mắc các
-                bệnh liên quan tới tuyến giáp và có thể trạng mệt mỏi, sút cân
-                nhanh.
+                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Người
+                đang mắc các bệnh liên quan tới tuyến giáp và có thể trạng mệt
+                mỏi, sút cân nhanh.
               </div>
               <div class="flex items-center gap-2 mt-6">
-                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Đối tượng xuất hiện
-                triệu chứng bất thường nghi ngờ ung thư tuyến giáp như: Có khối
-                u ở vùng tuyến giáp, giọng nói khàn, hạch bạch huyết sưng to,...
+                <img src="./src/Template5/Uploads/Group9867.png" alt="" />Đối
+                tượng xuất hiện triệu chứng bất thường nghi ngờ ung thư tuyến
+                giáp như: Có khối u ở vùng tuyến giáp, giọng nói khàn, hạch bạch
+                huyết sưng to,...
               </div>
 
               <div class="mt-10 text-center lg:text-left" action="">
@@ -213,7 +301,11 @@
             <div
               class="text-center after:w-[1px] after:h-full after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-full relative"
             >
-              <img class="mx-auto" src="./src/Template5/Uploads/img1.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img1.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Ho kéo dài mãi</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -224,7 +316,11 @@
             <div
               class="text-center after:w-[1px] after:h-full after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-full relative"
             >
-              <img class="mx-auto" src="./src/Template5/Uploads/img2.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img2.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Cơ thể mệt mỏi</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -233,7 +329,11 @@
             </div>
 
             <div class="text-center">
-              <img class="mx-auto" src="./src/Template5/Uploads/img3.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img3.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Thay đổi giọng nói</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -246,7 +346,11 @@
             <div
               class="text-center after:w-[1px] after:h-full after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-full relative"
             >
-              <img class="mx-auto" src="./src/Template5/Uploads/img4.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img4.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Các tuyến ở cổ bị sưng</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -257,7 +361,11 @@
             <div
               class="text-center after:w-[1px] after:h-full after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-full relative"
             >
-              <img class="mx-auto" src="./src/Template5/Uploads/img5.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img5.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Khó thở, khó nuốt</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -266,7 +374,11 @@
             </div>
 
             <div class="text-center">
-              <img class="mx-auto" src="./src/Template5/Uploads/img6.png" alt="" />
+              <img
+                class="mx-auto"
+                src="./src/Template5/Uploads/img6.png"
+                alt=""
+              />
               <div class="mt-4 text-lg font-bold">Cổ đau phía trước</div>
               <div class="mt-2 text-base">
                 Một số dấu hiệu ung thư tuyến giáp giai đoạn đầu cần hết sức lưu
@@ -517,7 +629,11 @@
               <div
                 class="w-full h-auto border border-gray-300 swiper-slide rounded-3xl"
               >
-                <img class="w-full" src="../src/Template5/Uploads/service1.png" alt="" />
+                <img
+                  class="w-full"
+                  src="../src/Template5/Uploads/service1.png"
+                  alt=""
+                />
                 <div class="p-8">
                   <div class="mt-5 text-lg font-bold">
                     Gói Khám sàng lọc ung thư tiền liệt tuyến
@@ -539,7 +655,11 @@
               <div
                 class="h-auto border border-gray-300 swiper-slide rounded-3xl"
               >
-                <img class="w-full" src="../src/Template5/Uploads/service2.png" alt="" />
+                <img
+                  class="w-full"
+                  src="../src/Template5/Uploads/service2.png"
+                  alt=""
+                />
                 <div class="p-8">
                   <div class="mt-5 text-lg font-bold">
                     Gói Khám sàng lọc ung thư tiền liệt tuyến
@@ -561,7 +681,11 @@
               <div
                 class="h-auto border border-gray-300 swiper-slide rounded-3xl"
               >
-                <img class="w-full" src="../src/Template5/Uploads/service3.png" alt="" />
+                <img
+                  class="w-full"
+                  src="../src/Template5/Uploads/service3.png"
+                  alt=""
+                />
                 <div class="p-8">
                   <div class="mt-5 text-lg font-bold">
                     Gói Khám sàng lọc ung thư tiền liệt tuyến
@@ -583,7 +707,11 @@
               <div
                 class="h-auto border border-gray-300 swiper-slide rounded-3xl"
               >
-                <img class="w-full" src="../src/Template5/Uploads/service3.png" alt="" />
+                <img
+                  class="w-full"
+                  src="../src/Template5/Uploads/service3.png"
+                  alt=""
+                />
                 <div class="p-8">
                   <div class="mt-5 text-lg font-bold">
                     Gói Khám sàng lọc ung thư tiền liệt tuyến
@@ -605,7 +733,11 @@
               <div
                 class="h-auto border border-gray-300 swiper-slide rounded-3xl"
               >
-                <img class="w-full" src="./src/Template5/Uploads/service3.png" alt="" />
+                <img
+                  class="w-full"
+                  src="./src/Template5/Uploads/service3.png"
+                  alt=""
+                />
                 <div class="p-8">
                   <div class="mt-5 text-lg font-bold">
                     Gói Khám sàng lọc ung thư tiền liệt tuyến
@@ -651,40 +783,18 @@
                 <div
                   class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
                 >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
                 </div>
                 <div
                   class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
                 >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div
-                class="flex flex-wrap items-center justify-center gap-8 lg:flex-nowrap"
-              >
-                <div
-                  class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
-                >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
-                </div>
-                <div
-                  class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
-                >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
                 </div>
               </div>
             </div>
@@ -695,18 +805,40 @@
                 <div
                   class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
                 >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
                 </div>
                 <div
                   class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
                 >
-                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh viện có khuôn
-                  viên khang trang, hiện đại và trong lành với hệ thống cây xanh
-                  rộng khắp, rất lý tưởng trong việc điều trị và hồi phục của
-                  người bệnh.
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div
+                class="flex flex-wrap items-center justify-center gap-8 lg:flex-nowrap"
+              >
+                <div
+                  class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
+                >
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
+                </div>
+                <div
+                  class="relative flex items-center w-[688px] h-[90px] border border-white rounded-xl gap-3 lg:p-5 after:w-12 after:h-1 after:bg-[#ebebeb] after:absolute after:inline-block after:top-0 after:left-24 before:w-12 before:h-1 before:bg-[#ebebeb] before:absolute before:inline-block before:bottom-0 before:right-24"
+                >
+                  <img src="./src/Template5/Uploads/icon3.png" alt="" />Bệnh
+                  viện có khuôn viên khang trang, hiện đại và trong lành với hệ
+                  thống cây xanh rộng khắp, rất lý tưởng trong việc điều trị và
+                  hồi phục của người bệnh.
                 </div>
               </div>
             </div>
@@ -727,7 +859,11 @@
               <div
                 class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
-                <img class="mx-auto text-center" src="./src/Template5/Uploads/1.png" alt="" />
+                <img
+                  class="mx-auto text-center"
+                  src="./src/Template5/Uploads/1.png"
+                  alt=""
+                />
                 <div class="mt-6 text-2xl font-bold">Bước 1:</div>
                 <div class="mt-2 text-lg">
                   Khách hàng liên hệ thông qua tổng đài 19001806 hoặc đến bệnh
@@ -742,7 +878,11 @@
               <div
                 class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
-                <img class="mx-auto text-center" src="./src/Template5/Uploads/2.png" alt="" />
+                <img
+                  class="mx-auto text-center"
+                  src="./src/Template5/Uploads/2.png"
+                  alt=""
+                />
                 <div class="mt-6 text-2xl font-bold">Bước 2:</div>
                 <div class="mt-2 text-lg">
                   Khách hàng liên hệ thông qua tổng đài 19001806 hoặc đến bệnh
@@ -757,7 +897,11 @@
               <div
                 class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
-                <img class="mx-auto text-center" src="./src/Template5/Uploads/3.png" alt="" />
+                <img
+                  class="mx-auto text-center"
+                  src="./src/Template5/Uploads/3.png"
+                  alt=""
+                />
                 <div class="mt-6 text-2xl font-bold">Bước 3:</div>
                 <div class="mt-2 text-lg">
                   Khách hàng liên hệ thông qua tổng đài 19001806 hoặc đến bệnh
@@ -772,7 +916,11 @@
               <div
                 class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
-                <img class="mx-auto text-center" src="./src/Template5/Uploads/4.png" alt="" />
+                <img
+                  class="mx-auto text-center"
+                  src="./src/Template5/Uploads/4.png"
+                  alt=""
+                />
                 <div class="mt-6 text-2xl font-bold">Bước 4:</div>
                 <div class="mt-2 text-lg">
                   Khách hàng liên hệ thông qua tổng đài 19001806 hoặc đến bệnh
@@ -787,7 +935,11 @@
               <div
                 class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
-                <img class="mx-auto text-center" src="./src/Template5/Uploads/4.png" alt="" />
+                <img
+                  class="mx-auto text-center"
+                  src="./src/Template5/Uploads/4.png"
+                  alt=""
+                />
                 <div class="mt-6 text-2xl font-bold">Bước 5:</div>
                 <div class="mt-2 text-lg">
                   Khách hàng liên hệ thông qua tổng đài 19001806 hoặc đến bệnh
@@ -936,7 +1088,11 @@
               <div
                 class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./src/Template5/Uploads/icon2.png" alt="" />
+                <img
+                  class="mx-auto mt-12"
+                  src="./src/Template5/Uploads/icon2.png"
+                  alt=""
+                />
                 <div class="p-8 mx-auto text-center">
                   <div class="mt-12 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
@@ -950,15 +1106,27 @@
                     phasellus diam. Sit mi at nibh amet, suscipit dui ornare
                     cursus duis.
                   </div>
-                  <img class="mx-auto mt-8" src="./src/Template5/Uploads/dia1.png" alt="" />
+                  <img
+                    class="mx-auto mt-8"
+                    src="./src/Template5/Uploads/dia1.png"
+                    alt=""
+                  />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
-                  <img class="mx-auto mt-2" src="./src/Template5/Uploads/sao.png" alt="" />
+                  <img
+                    class="mx-auto mt-2"
+                    src="./src/Template5/Uploads/sao.png"
+                    alt=""
+                  />
                 </div>
               </div>
               <div
                 class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./src/Template5/Uploads/icon2.png" alt="" />
+                <img
+                  class="mx-auto mt-12"
+                  src="./src/Template5/Uploads/icon2.png"
+                  alt=""
+                />
                 <div class="p-8 text-center">
                   <div class="mt-12 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
@@ -972,15 +1140,27 @@
                     phasellus diam. Sit mi at nibh amet, suscipit dui ornare
                     cursus duis.
                   </div>
-                  <img class="mx-auto mt-8" src="./src/Template5/Uploads/dia2.png" alt="" />
+                  <img
+                    class="mx-auto mt-8"
+                    src="./src/Template5/Uploads/dia2.png"
+                    alt=""
+                  />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
-                  <img class="mx-auto mt-2" src="./src/Template5/Uploads/sao.png" alt="" />
+                  <img
+                    class="mx-auto mt-2"
+                    src="./src/Template5/Uploads/sao.png"
+                    alt=""
+                  />
                 </div>
               </div>
               <div
                 class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./src/Template5/Uploads/icon2.png" alt="" />
+                <img
+                  class="mx-auto mt-12"
+                  src="./src/Template5/Uploads/icon2.png"
+                  alt=""
+                />
                 <div class="p-8 text-center">
                   <div class="mt-12 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
@@ -994,7 +1174,11 @@
                     phasellus diam. Sit mi at nibh amet, suscipit dui ornare
                     cursus duis.
                   </div>
-                  <img class="mx-auto mt-8" src="./src/Template5/Uploads/dia3.png" alt="" />
+                  <img
+                    class="mx-auto mt-8"
+                    src="./src/Template5/Uploads/dia3.png"
+                    alt=""
+                  />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
                     class="mx-auto mt-2 mt-12"
@@ -1006,7 +1190,11 @@
               <div
                 class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./src/Template5/Uploads/icon2.png" alt="" />
+                <img
+                  class="mx-auto mt-12"
+                  src="./src/Template5/Uploads/icon2.png"
+                  alt=""
+                />
                 <div class="p-8 text-center">
                   <div class="mt-12 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
@@ -1020,7 +1208,11 @@
                     phasellus diam. Sit mi at nibh amet, suscipit dui ornare
                     cursus duis.
                   </div>
-                  <img class="mx-auto mt-8" src="./src/Template5/Uploads/dia3.png" alt="" />
+                  <img
+                    class="mx-auto mt-8"
+                    src="./src/Template5/Uploads/dia3.png"
+                    alt=""
+                  />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
                     class="mx-auto mt-2 mt-12"
@@ -1032,7 +1224,11 @@
               <div
                 class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./src/Template5/Uploads/icon2.png" alt="" />
+                <img
+                  class="mx-auto mt-12"
+                  src="./src/Template5/Uploads/icon2.png"
+                  alt=""
+                />
                 <div class="p-8 text-center">
                   <div class="mt-12 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
@@ -1046,7 +1242,11 @@
                     phasellus diam. Sit mi at nibh amet, suscipit dui ornare
                     cursus duis.
                   </div>
-                  <img class="mx-auto mt-8" src="./src/Template5/Uploads/dia3.png" alt="" />
+                  <img
+                    class="mx-auto mt-8"
+                    src="./src/Template5/Uploads/dia3.png"
+                    alt=""
+                  />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
                     class="mx-auto mt-2 mt-12"
