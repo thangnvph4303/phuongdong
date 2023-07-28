@@ -21,11 +21,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <style>
-      .topnav #myMenu {
-        display: none;
-      }
-    </style>
+    <style></style>
     <title>Document</title>
   </head>
   <body class="max-w-[1920px]">
@@ -33,26 +29,113 @@
       <div
         class="bg-no-repeat bg-center bg-[url(./Uploads/Banner.png)] w-full h-[685px] overflow-hidden bg-cover object-cover"
       >
-        <div class="container mx-auto mt-6">
-          <div class="relative flex items-center justify-between overflow-hidden">
+        <div class="container mx-auto mt-6 relative">
+          <div class="flex justify-between">
             <img src="./Uploads/image3.png" alt="" />
-          <div class="hidden lg:block">
-			<nav id="myMenu" class="flex items-center gap-36">
-				<ul class="flex items-center gap-8 text-base font-bold">
-				  <li class="block">Giới thiệu</li>
-				  <li class="block">Đối tượng khách hàng</li>
-				  <li class="block">Quy trình</li>
-				  <li class="block">Bảng giá</li>
-				  <li class="block">Cảm nhận của khách hàng</li>
-				  <li class="block">Đội ngũ bác sĩ</li>
-				</ul>
-				<div
-				  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-60 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer"
-				>
-				  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
-				</div>
-			  </nav>
-		  </div>
+            <div class="nav flex items-center h-12">
+              <nav class="nav__pc flex items-center gap-36">
+                <ul class="nav__list flex list-none gap-8">
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Giới thiệu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Đối tượng khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Quy trình</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Bảng giá</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Cảm nhận của khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="nav__link no-underline text-[#333] text-base font-bold"
+                      >Đội ngũ bác sĩ</a
+                    >
+                  </li>
+                </ul>
+                <div
+                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer"
+                >
+                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
+                </div>
+              </nav>
+              <label
+                for="nav-mobile-input"
+                class="nav__bars-btn w-7 h-7 text-[#fff] hidden"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+                  />
+                </svg>
+              </label>
+              <!--khi click vào nav__bars-btn thì = click vào check box -->
+              <input type="checkbox" id="nav-mobile-input" class="nav__input" />
+              <label
+                for="nav-mobile-input"
+                class="nav__overlay fixed top-0 right-0 left-0 p-5 bg-black hidden"
+              ></label>
+              <nav
+                class="nav__mobile fixed top-0 right-0 left-0 p-5 w-80 bg-black"
+              >
+                <label
+                  for="nav-mobile-input"
+                  class="nav__mobile-close absolute w-7 h-7 top-4 right-4"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                      d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                    />
+                  </svg>
+                </label>
+                <ul class="mt-6 flex flex-col gap-y-7">
+                  <li><a href="" class="nav__mobile-link">Giới thiệu</a></li>
+                  <li>
+                    <a href="" class="nav__mobile-link">Đối tượng khách hàng</a>
+                  </li>
+                  <li><a href="" class="nav__mobile-link">Quy trình</a></li>
+                  <li><a href="" class="nav__mobile-link">Bảng giá</a></li>
+                  <li>
+                    <a href="" class="nav__mobile-link"
+                      >Cảm nhận của khách hàng</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="nav__mobile-link">Đội ngũ bác sĩ</a>
+                  </li>
+                </ul>
+                <div
+                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 w-36 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer mt-7"
+                >
+                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
+                </div>
+              </nav>
+            </div>
           </div>
 
           <div class="flex items-center mt-8 lg:mt-36 gap-x-1">
@@ -83,7 +166,7 @@
               Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
               ngay!
             </div>
-            <form class="relative" action="">
+            <!-- <form class="relative " action="">
               <input
                 type="number"
                 class="p-4 rounded-[30px] w-full"
@@ -95,7 +178,7 @@
                 <i class="uppercase fa-regular fa-paper-plane"></i> Gửi thông
                 tin
               </button>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>

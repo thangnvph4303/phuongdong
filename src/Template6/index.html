@@ -9,96 +9,226 @@
     />
     <title>Document</title>
     <style>
-       * {
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    ul {
-        list-style-type: none;
-    }
-    
-    nav {
-        background-color: #273c75;
-    }
-    
-    #main-menu {
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #fff;
+      }
+
+      .wrapper {
+        width: 1200px;
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0px auto;
+        padding-bottom: 20px;
+      }
+
+      .nav {
         display: flex;
-    }
-    
-    nav #main-menu li a {
-        color: #fff;
+        align-items: center;
+        height: 48px;
+        background-color: #333;
+      }
+
+      .nav__list {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav__link {
         text-decoration: none;
-        display: block;
-        padding: 8px 15px;
-    }
-    
-    nav #main-menu li:hover a {
-        background: #c23616;
-        transition: all 0.3s;
-    }
-    
-    #toggle {
-        display: none;
-        background: #353b48;
         color: #fff;
-        text-align: right;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    
-    @media screen and (max-width: 768px) {
-        #main-menu {
-            flex-direction: column;
-            text-align: center;
+        margin-right: 48px;
+      }
+
+      /* Article */
+      h1 {
+        line-height: 2rem;
+      }
+
+      article {
+        padding: 0 16px;
+        line-height: 1.6rem;
+      }
+
+      article img {
+        width: 640px;
+        max-width: 100%;
+        display: block;
+        margin: 32px auto;
+      }
+      .nav__bars-btn {
+        width: 28px;
+        height: 28px;
+        color: #fff;
+        display: none;
+        margin-left: 10px;
+      }
+      .nav__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+        animation: fadeIn linear 0.1s;
+      }
+      .nav__mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 320px;
+        background-color: #fff;
+        transform: translateX(-100%);
+        transition: transform 0.2s;
+      }
+      .nav__mobile-list {
+        margin-top: 24px;
+
+      }
+      .nav__mobile-link {
+        text-decoration: none;
+        color: #333;
+        padding: 8px;
+        font-size: 1.4rem;
+      }
+      .nav__mobile-close {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 1rem;
+        right: 1rem;
+      }
+      #nav-mobile-input {
+        display: none;
+      }
+      .nav__input:checked ~ .nav__overlay {
+        display: block;
+      }
+      .nav__input:checked ~ .nav__mobile {
+        transform: translateX(0%);
+      }
+      @media (max-width: 1023px) {
+        .nav__bars-btn {
+          display: block;
         }
-        #toggle {
-            display: block;
+        .nav__pc {
+          display: none;
         }
-        nav {
-            display: none;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-    }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <div id="header">
-          <div id="toggle">
-              <i class="fas fa-bars"></i>
-          </div>
-          <nav>
-              <ul id="main-menu">
-                  <li>
-                      <a href="">Trang chủ</a>
-                  </li>
-                  <li>
-                      <a href="">Giới thiệu</a>
-                  </li>
-                  <li>
-                      <a href="">Sản phẩm</a>
-                  </li>
-                  <li>
-                      <a href="">Dịch Vụ</a>
-                  </li>
-                  <li>
-                      <a href="">Blog</a>
-                  </li>
-                  <li>
-                      <a href="">Liên hệ</a>
-                  </li>
-              </ul>
-          </nav>
+    <div class="wrapper">
+      <div class="nav">
+        <nav class="nav__pc">
+          <ul class="nav__list">
+            <li><a href="" class="nav__link">Home</a></li>
+            <li><a href="" class="nav__link">About</a></li>
+            <li><a href="" class="nav__link">Category</a></li>
+            <li><a href="" class="nav__link">News</a></li>
+            <li><a href="" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <label for="nav-mobile-input" class="nav__bars-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+            />
+          </svg>
+        </label>
+        <!--khi click vào nav__bars-btn thì = click vào check box -->
+        <input type="checkbox" id="nav-mobile-input" class="nav__input" />
+
+        <!-- <div class="nav__overlay"></div> -->
+        <label for="nav-mobile-input" class="nav__overlay"></label>
+
+        <nav class="nav__mobile">
+          <label for="nav-mobile-input" class="nav__mobile-close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path
+                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+              />
+            </svg>
+          </label>
+          <ul class="nav__mobile-list">
+            <li><a href="" class="nav__mobile-link">Home</a></li>
+            <li><a href="" class="nav__mobile-link">About</a></li>
+            <li><a href="" class="nav__mobile-link">Category</a></li>
+            <li><a href="" class="nav__mobile-link">News</a></li>
+          </ul>
+        </nav>
       </div>
-  </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script>
-      $(document).ready(function() {
-    $('#toggle').click(function() {
-        $('nav').slideToggle();
-    });
-})
-    </script>
+
+      <article>
+        <h1>
+          Hơn 100 học sinh biết bơi nhờ lớp dạy bơi miễn phí của những thanh
+          niên tốt bụng
+        </h1>
+        <p>
+          <strong
+            >Hai năm nay, hai thanh niên ở xã Chư Đăng Ya, huyện Chư Pah (Gia
+            Lai) cùng với một số thanh niên khác của xã đã tự nguyện dạy bơi cho
+            những học sinh bản địa. Nhờ có lớp học bơi này, hơn 100 học sinh ở
+            xã đã biết bơi, có thêm kỹ năng sinh tồn ở vùng đất thường có nước
+            dữ vào mùa mưa.</strong
+          >
+        </p>
+        <p>
+          Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ
+          bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100
+          triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho
+          người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người
+          nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.
+        </p>
+        <img
+          src="https://i.ytimg.com/vi/H1QDvPhyjkw/maxresdefault.jpg"
+          alt=""
+        />
+        <p>
+          Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ
+          bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100
+          triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho
+          người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người
+          nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.
+        </p>
+        <img
+          src="https://bloganchoi.com/wp-content/uploads/2021/07/nhung-cau-noi-hay-ve-thanh-xuan-2.jpg"
+          alt=""
+        />
+        <p>
+          Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ
+          bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100
+          triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho
+          người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người
+          nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.
+        </p>
+        <img
+          src="http://danvan.vn/Uploads/2017/9/15/quangyen040917.jpg"
+          alt=""
+        />
+        <p>
+          Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ
+          bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100
+          triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho
+          người đánh rơi vào chiều ngày 28.10.2019 vẫn đang được nhiều người
+          nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.
+        </p>
+      </article>
+    </div>
   </body>
 </html>
