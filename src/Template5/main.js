@@ -34,6 +34,10 @@ var myPhongkham = new Swiper(".myPhongkham", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
 
 function myFunction() {
@@ -47,7 +51,7 @@ function myFunction() {
 
 var myService = new Swiper(".myService", {
   watchSlidesProgress: true,
-  spaceBetween: 10,
+  spaceBetween: 32,
   slidesPerView: 3,
   breakpoints: {
     300: {
@@ -70,7 +74,7 @@ var myService = new Swiper(".myService", {
 
 var quytrinh = new Swiper(".quytrinh", {
   watchSlidesProgress: true,
-  spaceBetween: 10,
+  spaceBetween: 32,
   slidesPerView: 4,
   breakpoints: {
     300: {
@@ -85,15 +89,11 @@ var quytrinh = new Swiper(".quytrinh", {
       spaceBetween: 10,
     },
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 });
 
 var myDoctor = new Swiper(".myDoctor", {
   watchSlidesProgress: true,
-  spaceBetween: 10,
+  spaceBetween: 32,
   slidesPerView: 4,
   breakpoints: {
     300: {
@@ -116,7 +116,7 @@ var myDoctor = new Swiper(".myDoctor", {
 
 var myComment = new Swiper(".myComment", {
   watchSlidesProgress: true,
-  spaceBetween: 10,
+  spaceBetween: 32,
   slidesPerView: 3,
   breakpoints: {
     300: {
@@ -136,9 +136,3 @@ var myComment = new Swiper(".myComment", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-$(document).ready(function() {
-  $('#toggle').click(function() {
-      $('nav').slideToggle();
-  });
-})

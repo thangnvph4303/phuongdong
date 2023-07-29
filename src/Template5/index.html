@@ -21,7 +21,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <style></style>
+    <style>
+    </style>
     <title>Document</title>
   </head>
   <body class="max-w-[1920px]">
@@ -30,114 +31,37 @@
         class="bg-no-repeat bg-center bg-[url(./Uploads/Banner.png)] w-full h-[685px] overflow-hidden bg-cover object-cover"
       >
         <div class="container mx-auto mt-6 relative">
-          <div class="flex justify-between">
-            <img src="./Uploads/image3.png" alt="" />
-            <div class="nav flex items-center h-12">
-              <nav class="nav__pc flex items-center gap-36">
-                <ul class="nav__list flex list-none gap-8">
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Giới thiệu</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Đối tượng khách hàng</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Quy trình</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Bảng giá</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Cảm nhận của khách hàng</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="nav__link no-underline text-[#333] text-base font-bold"
-                      >Đội ngũ bác sĩ</a
-                    >
-                  </li>
-                </ul>
-                <div
-                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer"
-                >
-                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
+          <div class='wrapper'>
+            <header class='primary-header'>
+                <div class='containers relative flex w-full items-center justify-between p-0'>
+                  <div class="">
+                    <img src="./Uploads/image3.png" alt="">
+                  </div>
+                    <div class='nav-wrapper'>
+                        <input type='checkbox' id='primary-toggle' aria-controls='primary-navigation' hidden>
+                        <label for='primary-toggle' class='primary-toggle'>
+                            <div class='line ' aria-hidden='true'></div>
+                            <span class='absolute w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden whitespace-nowrap border-0'>Menu</span>
+                        </label>
+                        <nav class='primary-navigation' id='primary-navigation'>
+                            <ul class='nav-list flex items-center mx-5 gap-x-8 text-base font-bold gap-y-5' aria-label='Primary' role='list'>
+                                <li><a class="flex w-full items-center relative" href=''>Giới thiệu</a></li>
+                                <li><a class="flex w-full items-center relative" href=''>Đối tượng khách hàng</a></li>
+                                <li><a class="flex w-full items-center relative" href=''>Quy trình</a></li>
+                                <li><a class="flex w-full items-center relative" href=''>Bảng giá</a></li>
+                                <li><a class="flex w-full items-center relative" href=''>Cảm nhận của khách hàng</a></li>
+                                <li><a class="flex w-full items-center relative" href=''>Đội ngũ bác sĩ</a></li>
+                                <a 
+                                      class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 w-36 h-[40px] border rounded-3xl p-3 bg-green-500 text-white shadow-bold opacity-100 cursor-pointer lg:ml-20" href="tel:012345678"><i class="fa-solid fa-phone-volume"></i> Gọi 0123456789</a>
+                            </ul>
+                        </nav>
+                    </div>
+    
                 </div>
-              </nav>
-              <label
-                for="nav-mobile-input"
-                class="nav__bars-btn w-7 h-7 text-[#fff] hidden"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path
-                    d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
-                  />
-                </svg>
-              </label>
-              <!--khi click vào nav__bars-btn thì = click vào check box -->
-              <input type="checkbox" id="nav-mobile-input" class="nav__input" />
-              <label
-                for="nav-mobile-input"
-                class="nav__overlay fixed top-0 right-0 left-0 p-5 bg-black hidden"
-              ></label>
-              <nav
-                class="nav__mobile fixed top-0 right-0 left-0 p-5 w-80 bg-black"
-              >
-                <label
-                  for="nav-mobile-input"
-                  class="nav__mobile-close absolute w-7 h-7 top-4 right-4"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <path
-                      d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
-                    />
-                  </svg>
-                </label>
-                <ul class="mt-6 flex flex-col gap-y-7">
-                  <li><a href="" class="nav__mobile-link">Giới thiệu</a></li>
-                  <li>
-                    <a href="" class="nav__mobile-link">Đối tượng khách hàng</a>
-                  </li>
-                  <li><a href="" class="nav__mobile-link">Quy trình</a></li>
-                  <li><a href="" class="nav__mobile-link">Bảng giá</a></li>
-                  <li>
-                    <a href="" class="nav__mobile-link"
-                      >Cảm nhận của khách hàng</a
-                    >
-                  </li>
-                  <li>
-                    <a href="" class="nav__mobile-link">Đội ngũ bác sĩ</a>
-                  </li>
-                </ul>
-                <div
-                  class="flex items-center gap-2 lg:text-base md:text-sm text-xs font-bold lg:w-48 w-36 h-[40px] border rounded-[30px] p-3 bg-green-400 text-white shadow-2xl opacity-100 cursor-pointer mt-7"
-                >
-                  <i class="fa-solid fa-phone-volume"></i> Gọi 0123456789
-                </div>
-              </nav>
-            </div>
-          </div>
+            </header>
+        </div>
 
+         <div class="">
           <div class="flex items-center mt-8 lg:mt-36 gap-x-1">
             <div class="text-xs font-bold text-white uppercase lg:text-base">
               TẦM SOÁT UNG THƯ TUYẾN GIÁP
@@ -166,20 +90,21 @@
               Quý khách vui lòng để lại số điện thoại, chúng tôi sẽ liên hệ lại
               ngay!
             </div>
-            <!-- <form class="relative " action="">
+            <form class="relative " action="">
               <input
-                type="number"
+                type="tel" id="phone" name="phone" pattern="[0-9]{10}" required
                 class="p-4 rounded-[30px] w-full"
                 placeholder="Nhập số điện thoại"
               />
               <button
-                class="absolute top-[5px] right-[1%] bg-green-500 rounded-[20px] p-[10px] text-white w-40 shadow-2xl opacity-100 cursor-pointer"
+                class="absolute top-[5px] right-[1%] bg-green-500 rounded-[20px] p-[10px] text-white w-40 opacity-100 cursor-pointer shadow-bold"
               >
                 <i class="uppercase fa-regular fa-paper-plane"></i> Gửi thông
                 tin
               </button>
-            </form> -->
+            </form>
           </div>
+         </div>
         </div>
       </div>
 
@@ -190,7 +115,7 @@
           <div
             class="container items-center mx-auto lg:flex lg:justify-center gap-x-24"
           >
-            <div class="">
+            <div class="lg:w-1/2">
               <div class="text-4xl font-bold">
                 Gói Tầm soát ung thư tuyến giáp là gì?
               </div>
@@ -216,15 +141,15 @@
                 khám và phát hiện sớm.
               </div>
               <div class="mt-10 text-center lg:text-left" action="">
-                <a
-                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52"
+                <a href="tel:012345678"
+                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52 shadow-bold"
                 >
                   <i class="fa-solid fa-phone-volume"></i> gọi cho chúng tôi
                 </a>
               </div>
             </div>
             <img
-              class="object-cover w-full overflow-hidden mt-7"
+              class="object-cover overflow-hidden mt-7"
               src="./Uploads/yt1.png"
               alt=""
             />
@@ -232,7 +157,7 @@
         </div>
 
         <div
-          class="mt-32 bg-[url(./Uploads/Rectangle6790.png)] bg-no-repeat pb-52 bg-left-bottom object-cover"
+          class="mt-28 bg-[url(./Uploads/Rectangle6790.png)] bg-no-repeat pb-52 bg-left-bottom object-cover"
         >
           <div
             class="container items-center mx-auto lg:flex lg:justify-center gap-x-10"
@@ -242,10 +167,11 @@
               src="./Uploads/yt2.png"
               alt=""
             />
-            <div class="">
+            <div class="lg:w-1/2">
               <div class="text-4xl font-bold">
                 Ai nên khám tầm soát ung thư tuyến giáp?
               </div>
+              <div class="mt-6">Phát hiện sớm bệnh lý ung thư tuyến giáp không chỉ nâng cao hiệu quả trong điều trị mà còn hạn chế các biến chứng, tổn thương, gia tăng cơ hồi hồi phục hoàn toàn cho người bệnh. Theo khuyến cáo của bác sĩ Bệnh Viện Đa khoa Phương Đông, những trường hợp sau đây nên khám sàng lọc định kỳ căn bệnh.</div>
               <div class="flex items-center gap-2 mt-10">
                 <img src="./Uploads/Group9867.png" alt="" />
                 Nữ giới ở độ tuổi từ 15 - 35 và nam giới trong độ tuổi từ 40 trở
@@ -276,8 +202,8 @@
               </div>
 
               <div class="mt-10 text-center lg:text-left" action="">
-                <a
-                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52"
+                <a href="tel:012345678"
+                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52 shadow-bold"
                 >
                   <i class="fa-solid fa-phone-volume"></i> gọi cho chúng tôi
                 </a>
@@ -287,7 +213,7 @@
         </div>
       </div>
 
-      <div class="container mx-auto lg:mt-32">
+      <div class="container mx-auto lg:mt-28">
         <div class="text-4xl font-bold text-center">
           Dấu hiệu nhận biết Ung thư tuyến giáp
         </div>
@@ -361,7 +287,7 @@
       </div>
 
       <div
-        class="mt-32 bg-[url(./Uploads/bg-1.png)] bg-no-repeat pb-80 bg-left container mx-auto relative"
+        class="mt-28 bg-[url(./Uploads/bg-1.png)] bg-no-repeat bg-left-bottom py-20 container mx-auto relative"
       >
         <div class="">
           <div class="flex items-center gap-7">
@@ -518,8 +444,8 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <i class="fa-solid fa-circle-arrow-right swiper-button-next after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
+              <i class="fa-solid fa-circle-arrow-left swiper-button-prev after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
             </div>
             <div class="items-center lg:flex gap-7 swiper-wslide"></div>
           </div>
@@ -527,16 +453,16 @@
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-      <div class="lg:mt-32">
+      <div class="">
         <div
           class="lg:mt-20 bg-[url(./Uploads/Rectangle678.png)] bg-no-repeat pb-52 bg-right-bottom"
         >
           <div
             class="container items-center mx-auto lg:flex lg:justify-center gap-x-24"
           >
-            <div class="lg:w-[688px]">
+            <div class="lg:w-1/2">
               <div class="text-4xl font-bold">
-                Gói Tầm soát ung thư tuyến giáp là gì?
+                Lưu ý khi sử dụng dịch vụ
               </div>
               <div
                 class="mt-10 flex items-center bg-[#FFF2FD] text-base p-3 gap-4"
@@ -572,15 +498,15 @@
               </div>
 
               <div class="mt-10 text-center lg:text-left" action="">
-                <a
-                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52"
+                <a href="tel:012345678"
+                  class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52 shadow-bold"
                 >
                   <i class="fa-solid fa-phone-volume"></i> gọi cho chúng tôi
                 </a>
               </div>
             </div>
             <img
-              class="mt-20 overflow-hidden"
+              class="mt-12 overflow-hidden object-cover"
               src="./Uploads/anh3.png"
               alt=""
             />
@@ -590,12 +516,12 @@
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
       <div class="">
-        <div class="container mx-auto lg:mt-32">
+        <div class="container mx-auto lg:mt-28">
           <div class="text-4xl font-bold text-center">
             Các gói dịch vụ liên quan
           </div>
           <!-- <div class="items-center gap-8 mt-10 lg:flex"> -->
-          <div class="swiper myService">
+          <div class="swiper myService mt-10">
             <div class="swiper-wrapper">
               <div
                 class="w-full h-auto border border-gray-300 swiper-slide rounded-3xl"
@@ -615,7 +541,7 @@
                   <div
                     class="mt-6 text-lg font-bold text-green-500 cursor-pointer"
                   >
-                    Đăng ký tư vấn ngay >>
+                    Đăng ký tư vấn ngay <i class="fa-solid fa-angles-right"></i>
                   </div>
                 </div>
               </div>
@@ -637,7 +563,7 @@
                   <div
                     class="mt-6 text-lg font-bold text-green-500 cursor-pointer"
                   >
-                    Đăng ký tư vấn ngay >>
+                    Đăng ký tư vấn ngay <i class="fa-solid fa-angles-right"></i>
                   </div>
                 </div>
               </div>
@@ -659,7 +585,7 @@
                   <div
                     class="mt-6 text-lg font-bold text-green-500 cursor-pointer"
                   >
-                    Đăng ký tư vấn ngay >>
+                    Đăng ký tư vấn ngay <i class="fa-solid fa-angles-right"></i>
                   </div>
                 </div>
               </div>
@@ -681,7 +607,7 @@
                   <div
                     class="mt-6 text-lg font-bold text-green-500 cursor-pointer"
                   >
-                    Đăng ký tư vấn ngay >>
+                    Đăng ký tư vấn ngay <i class="fa-solid fa-angles-right"></i>
                   </div>
                 </div>
               </div>
@@ -703,30 +629,30 @@
                   <div
                     class="mt-6 text-lg font-bold text-green-500 cursor-pointer"
                   >
-                    Đăng ký tư vấn ngay >>
+                    Đăng ký tư vấn ngay <i class="fa-solid fa-angles-right"></i>
                   </div>
                 </div>
               </div>
 
               <!-- </div> -->
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <i class="fa-solid fa-circle-arrow-right swiper-button-next after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
+            <i class="fa-solid fa-circle-arrow-left swiper-button-prev after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
           </div>
         </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
       <div
-        class="mt-32 bg-[url(./Uploads/bg2.png)] w-full overflow-hidden lg:h-[651px] h-[950px]"
+        class="lg:mt-40 mt-6 bg-[url(./Uploads/bg2.png)] w-full overflow-hidden lg:h-[651px] p-5"
       >
-        <div class="container mx-auto lg:mt-24">
+        <div class="container mx-auto">
           <div
-            class="text-white lg:w-[654px] text-center mx-auto text-4xl font-bold"
+            class="text-white lg:w-[654px] text-center mx-auto text-4xl font-bold mt-20"
           >
             Lợi ích khi sử dụng dịch vụ Tầm soát ung thư tuyến giáp
           </div>
-          <div class="flex flex-col gap-8 mt-10">
+          <div class="flex flex-col gap-8 mt-12">
             <div class="">
               <div
                 class="flex flex-wrap items-center justify-center gap-8 lg:flex-nowrap"
@@ -808,7 +734,7 @@
           <div class="mt-10 swiper quytrinh">
             <div class="swiper-wrapper">
               <div
-                class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
+                class="text-center mx-auto shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#A18CD1] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
                 <img class="mx-auto text-center" src="./Uploads/1.png" alt="" />
                 <div class="mt-6 text-2xl font-bold">Bước 1:</div>
@@ -823,7 +749,7 @@
                 />
               </div>
               <div
-                class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
+                class="text-center mx-auto shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#A18CD1] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
                 <img class="mx-auto text-center" src="./Uploads/2.png" alt="" />
                 <div class="mt-6 text-2xl font-bold">Bước 2:</div>
@@ -838,7 +764,7 @@
                 />
               </div>
               <div
-                class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
+                class="text-center mx-auto shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#A18CD1] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
                 <img class="mx-auto text-center" src="./Uploads/3.png" alt="" />
                 <div class="mt-6 text-2xl font-bold">Bước 3:</div>
@@ -853,7 +779,7 @@
                 />
               </div>
               <div
-                class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
+                class="text-center mx-auto shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#A18CD1] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
                 <img class="mx-auto text-center" src="./Uploads/4.png" alt="" />
                 <div class="mt-6 text-2xl font-bold">Bước 4:</div>
@@ -868,7 +794,7 @@
                 />
               </div>
               <div
-                class="text-center mx-auto border shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#FBC2EB] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
+                class="text-center mx-auto shadow-2xl rounded-3xl relative before:absolute before:w-28 before:h-7 before:bg-[#A18CD1] before:inline-block before:text-center before:mx-auto before:mt-6 before:left-32 before:-bottom-4 before:rounded-2xl p-5 swiper-slide"
               >
                 <img class="mx-auto text-center" src="./Uploads/4.png" alt="" />
                 <div class="mt-6 text-2xl font-bold">Bước 5:</div>
@@ -883,15 +809,14 @@
                 />
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+           
           </div>
           <div
             class="flex flex-wrap items-center justify-center gap-8 mt-10 lg:flex-nowrap"
           ></div>
-          <div class="mt-10 text-center" action="">
+          <div class="mt-8 text-center" action="">
             <a
-              class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52"
+              class="p-3 text-white uppercase bg-green-500 shadow-2xl opacity-100 cursor-pointer rounded-3xl w-52 shadow-bold"
             >
               đăng ký tư vấn
             </a>
@@ -902,13 +827,13 @@
 
       <div class="">
         <div
-          class="mt-40 container mx-auto bg-[url(./Uploads/nenbs.png)] bg-no-repeat object-cover bg-bottom pb-28"
+          class="mt-32 container mx-auto bg-[url(./Uploads/nenbs.png)] bg-no-repeat object-cover bg-bottom pb-28"
         >
           <div class="text-4xl font-bold text-center">
             Đội ngũ bác sĩ của chúng tôi
           </div>
           <div class="mt-10 swiper myDoctor">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper mx-8">
               <div
                 class="text-center lg:text-white relative before:w-52 before:h-1 before:bottom-[27%] before:bg-white before:absolute before:inline-block before:right-20 swiper-slide"
               >
@@ -995,8 +920,8 @@
                 <div class="mt-1 text-xs">4.8/5 (38 bình chọn)</div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <i class="fa-solid fa-circle-arrow-right swiper-button-next after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
+            <i class="fa-solid fa-circle-arrow-left swiper-button-prev after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
           </div>
         </div>
         <img
@@ -1007,9 +932,9 @@
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-      <div class="mt-28 bg-[url(./Uploads/bgdia.png)]">
+      <div class="mt-28 bg-[url(./Uploads/bg-dia.png)] lg:p-20">
         <div class="container mx-auto">
-          <div class="text-4xl font-bold text-center lg:w-[856px] mx-auto">
+          <div class="lg:text-4xl font-bold text-[#ffffff] text-center lg:w-[856px] mx-auto">
             Cảm nhận của khách hàng sau khi sử dụng dịch vụ Tầm soát ung thư
             tuyến giáp
           </div>
@@ -1017,11 +942,11 @@
           <div class="mt-10 swiper myComment">
             <div class="swiper-wrapper">
               <div
-                class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
+                class="lg:w-[448px] h-auto  border border-gray-300 bg-[#ffffff] rounded-3xl p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./Uploads/icon2.png" alt="" />
+                <img class="mx-auto mt-5" src="./Uploads/icon2.png" alt="" />
                 <div class="p-8 mx-auto text-center">
-                  <div class="mt-12 text-base font-bold">
+                  <div class="mt-4 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
                     yên và an tâm khi thăm khám tại đây!
                   </div>
@@ -1039,11 +964,11 @@
                 </div>
               </div>
               <div
-                class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
+                class="lg:w-[448px] border border-gray-300 bg-[#ffffff] rounded-3xl p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./Uploads/icon2.png" alt="" />
+                <img class="mx-auto mt-5" src="./Uploads/icon2.png" alt="" />
                 <div class="p-8 text-center">
-                  <div class="mt-12 text-base font-bold">
+                  <div class="mt-4 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
                     yên và an tâm khi thăm khám tại đây!
                   </div>
@@ -1061,11 +986,11 @@
                 </div>
               </div>
               <div
-                class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
+                class="lg:w-[448px] border border-gray-300 bg-[#ffffff] rounded-3xl p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./Uploads/icon2.png" alt="" />
+                <img class="mx-auto mt-5" src="./Uploads/icon2.png" alt="" />
                 <div class="p-8 text-center">
-                  <div class="mt-12 text-base font-bold">
+                  <div class="mt-4 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
                     yên và an tâm khi thăm khám tại đây!
                   </div>
@@ -1080,18 +1005,18 @@
                   <img class="mx-auto mt-8" src="./Uploads/dia3.png" alt="" />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
-                    class="mx-auto mt-2 mt-12"
+                    class="mx-auto mt-2"
                     src="./Uploads/sao.png"
                     alt=""
                   />
                 </div>
               </div>
               <div
-                class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
+                class="lg:w-[448px] border border-gray-300 bg-[#ffffff] rounded-3xl p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./Uploads/icon2.png" alt="" />
+                <img class="mx-auto mt-5" src="./Uploads/icon2.png" alt="" />
                 <div class="p-8 text-center">
-                  <div class="mt-12 text-base font-bold">
+                  <div class="mt-4 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
                     yên và an tâm khi thăm khám tại đây!
                   </div>
@@ -1106,18 +1031,18 @@
                   <img class="mx-auto mt-8" src="./Uploads/dia3.png" alt="" />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
-                    class="mx-auto mt-2 mt-12"
+                    class="mx-auto mt-2"
                     src="./Uploads/sao.png"
                     alt=""
                   />
                 </div>
               </div>
               <div
-                class="lg:w-[448px] border border-gray-300 rounded-3xl h-auto p-5 swiper-slide"
+                class="lg:w-[448px] border border-gray-300 bg-[#ffffff] rounded-3xl p-5 swiper-slide"
               >
-                <img class="mx-auto mt-12" src="./Uploads/icon2.png" alt="" />
+                <img class="mx-auto mt-5" src="./Uploads/icon2.png" alt="" />
                 <div class="p-8 text-center">
-                  <div class="mt-12 text-base font-bold">
+                  <div class="mt-4 text-base font-bold">
                     Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình
                     yên và an tâm khi thăm khám tại đây!
                   </div>
@@ -1132,21 +1057,22 @@
                   <img class="mx-auto mt-8" src="./Uploads/dia3.png" alt="" />
                   <div class="mt-4 text-base font-bold">Nguyễn Minh Ánh</div>
                   <img
-                    class="mx-auto mt-2 mt-12"
+                    class="mx-auto mt-2"
                     src="./Uploads/sao.png"
                     alt=""
                   />
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <i class="fa-solid fa-circle-arrow-right swiper-button-next after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
+            <i class="fa-solid fa-circle-arrow-left swiper-button-prev after:content-none text-4xl bg-[#A18CD1] text-[#ffffff] w-10 h-10  rounded-[50px]"></i>
           </div>
           <img
             class="mx-auto mt-8 text-center"
             src="./Uploads/ngangxanh.png"
             alt=""
           />
+        </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -1158,7 +1084,7 @@
           <div class="">
             <form class="lg:w-[568px] relative" action="">
               <div class="border rounded-3xl lg:w-[568px] h-[491px]">
-                <div class="border rounded-t-3xl bg-[#FBC2EB]">
+                <div class="border rounded-t-3xl bg-tron text-[#ffffff]">
                   <div class="mt-4 text-xl font-bold text-center">
                     ĐĂNG KÝ TƯ VẤN MIỄN PHÍ
                   </div>
@@ -1170,31 +1096,41 @@
                 <div class="text-center">
                   <input
                     placeholder="Họ và tên (*)"
-                    class="h-12 p-2 mt-8 border rounded-md lg:w-4/5"
+                    class="h-12 p-2 mt-8 border rounded-md lg:w-4/5 bg-slate-200"
                     type="text"
-                    class="name"
+                    name="name"
+                    id="name"
+                    pattern="[a-zA-Z]+" required
                   />
                   <input
                     placeholder="Số điện thoại (*)"
-                    class="h-12 p-2 mt-4 border rounded-md lg:w-4/5"
-                    type="number"
-                    class="tell"
+                    class="h-12 p-2 mt-4 border rounded-md lg:w-4/5 bg-slate-200"
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    pattern="[0-9]{10}"
+                    required
                   />
                   <input
                     placeholder="Email"
-                    class="h-12 p-2 mt-4 border rounded-md lg:w-4/5"
+                    class="h-12 p-2 mt-4 border rounded-md lg:w-4/5 bg-slate-200"
                     type="email"
-                    class="email"
+                    name="email"
+                    id="email"
+                    required
                   />
-                  <input
+                  <textarea
                     placeholder="Nội dung..."
-                    class="h-20 p-2 mt-4 border rounded-md lg:w-4/5"
+                    class="h-20 p-2 mt-4 border rounded-md lg:w-4/5 bg-slate-200"
                     type="text"
-                    class="content"
-                  />
+                    name="content"
+                    id="content"
+                    row="4"
+                    cols="50" minlength="10" maxlength="500" required
+                  ></textarea>
                 </div>
                 <button
-                  class="flex items-center justify-center mx-auto gap-3 text-center bg-green-500 rounded-[20px] p-3 text-white w-52 uppercase mt-8 shadow-2xl opacity-100 cursor-pointer"
+                  class="flex items-center justify-center mx-auto gap-3 text-center bg-green-500 rounded-[20px] p-3 text-white w-52 uppercase mt-8 shadow-2xl opacity-100 cursor-pointer shadow-bold"
                 >
                   <i class="fa-regular fa-file"></i> đăng ký tư vấn
                 </button>
@@ -1203,7 +1139,7 @@
           </div>
         </div>
 
-        <div class="mt-24 bg-[#FBC2EB] p-1">
+        <div class="mt-24 bg-tron p-1">
           <div class="container mx-auto">
             <img class="mt-10" src="./Uploads/Logo2.png" alt="" />
 
@@ -1252,6 +1188,8 @@
                 </div>
               </div>
             </div>
+            <hr class="w-full text-[#ffffff] h-2">
+            <div class="text-[#ffffff] text-base text-center p-3">© Copyright 2022 Bệnh Viện Đa khoa Phương Đông. All Rights Reserved. Designed and developed by Tech5S</div>
           </div>
         </div>
       </div>
